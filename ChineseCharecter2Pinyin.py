@@ -13,7 +13,8 @@ def ChineseCaracter2Pinyin():
     
     outPutFile = originalFile.split(".")[0]+"_pinyin"+".txt"
     print(outPutFile)
-    file_reader = open(originalFile,'r') # 字符串报GBK错误，所以用encoding
+    #file_reader = open(originalFile,'r') 
+    file_reader = open(originalFile,'r',encoding='utf-8') # 字符串报GBK错误，所以用encoding
     file_writer = open(outPutFile,'w')
 
     # 读一行
