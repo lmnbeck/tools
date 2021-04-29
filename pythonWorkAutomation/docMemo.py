@@ -51,3 +51,7 @@ price += 10
 print(price)
 
 # 3 自动化整理计算机文件
+## 3.1 strip()函数的技巧
+str1 = 'xyzxyz-Python-zyxzyx'
+str2 = str1.rstrip('zyx')
+print(str2)
