@@ -2,6 +2,8 @@ from pathlib import Path
 from datetime import datetime
 from exifread import process_file
 
+""" 按照日期分类照片 """
+
 # scr_folder = Path('F:\\')
 scr_folder = Path('E:\\pic\\cameraCard\\')
 des_folder = Path('E:\\pic\\cameraCard\\')

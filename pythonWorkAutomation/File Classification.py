@@ -1,6 +1,8 @@
 import os
 import shutil
 
+""" 把文件扩展名相同的文件移动到相同文件夹 """
+
 src_folder = 'D:\\Software\\'
 des_folder = 'D:\\Software\\after\\'
 files = os.listdir(src_folder)

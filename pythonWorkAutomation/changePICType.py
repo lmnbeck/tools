@@ -1,6 +1,8 @@
 from pathlib import Path
 from PIL import Image
 
+""" 用with_suffix更改文件类型 """
+
 scr_folder = Path('/home/ubuntu/workSpace/pic/before/')
 des_folder = Path('/home/ubuntu/workSpace/pic/after/')
 if not des_folder.exists():
