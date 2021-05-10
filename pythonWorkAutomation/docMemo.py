@@ -122,7 +122,7 @@ Setting up chromium-browser-l10n (90.0.4430.72-0ubuntu0.18.04.1) ...
 ubuntu 安装chromedriver
 
 // 下载对应的版本
-wget -N https://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip
+wget -N https://chromedriver.storage.googleapis.com/90.0.4430.24/chromedriver_linux64.zip
 // 解压
 unzip chromedriver_linux64.zip
 chmod +x chromedriver
