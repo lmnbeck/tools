@@ -1,5 +1,7 @@
 from pathlib import Path
 
+""" 查找指定文件名的文件 """
+
 while True:
     path2Find = input("where? ")
     path2Find = Path(path2Find.strip())

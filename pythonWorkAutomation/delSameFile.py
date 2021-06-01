@@ -3,6 +3,8 @@ from pathlib import Path
 from filecmp import cmp
 from processBar import *
 
+""" 删除指定区域中内容相同的文件 """
+
 #  Define the folders to compare
 src_folder = Path(input("where?").strip())
 des_folder = Path(input("To where?").strip())
