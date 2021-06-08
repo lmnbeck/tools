@@ -1,7 +1,4 @@
 #-*- coding = uft-8 -*-
-#@Time : 2020/9/26 4:35 下午
-#@Author : 公众号 菜J学Python
-#@File : tengxun_danmu-1.py
 
 import requests
 import json
