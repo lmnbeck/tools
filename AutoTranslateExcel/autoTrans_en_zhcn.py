@@ -2,6 +2,7 @@
 from tkinter.tix import COLUMN
 import xlwings as xw
 from google_trans_new import google_translator
+import time
 
 def translateCell(text, lang):
     translator = google_translator(timeout=10)
@@ -13,9 +14,10 @@ def translateCell(text, lang):
     
     return translations
 
+Tstart = time.perf_counter()
 
 # 打开Excel程序，默认设置：程序可见，只打开不新建工作薄，屏幕更新关闭
-app = xw.App(visible=True, add_book=False)
+app = xw.App(visible=False, add_book=False)
 try:
     wb = app.books.open(r'E:\05_Development\FunctionSafety\DFEMA\System Dfmea.xlsx')
     # 读取所有sheet
@@ -47,6 +49,10 @@ try:
                 columnNumber += 1
             rowNumber += 1
         
+        wb.save(r'E:\05_Development\FunctionSafety\DFEMA\test_translated.xlsx')
+
+    Tend = time.perf_counter()
+    print('程序运行时间:%s毫秒' % ((Tend - Tstart)*1000))
 
     # text = wb.sheets['sheet1'].range(1,1).value
     # print(text)
@@ -55,9 +61,10 @@ try:
 
     # wb.sheets['sheet1'].range(1,1).value = text + '\n' + textzhCN
 
-    wb.save(r'E:\05_Development\FunctionSafety\DFEMA\test_translated.xlsx')
-    wb.close()
+    # wb.save(r'E:\05_Development\FunctionSafety\DFEMA\test_translated.xlsx')
+    # wb.close()
 except Exception as e:
     print(e)
 finally:
+    wb.close()
     app.quit()
